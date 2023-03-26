@@ -16,12 +16,20 @@ const registerContactsPostService = async (data, userId) => {
     const foundUserCustomerContacts = await reposytoryCustomerContacts.findOne({
         where: {
             email: data.email,
+        },
+    });
+    const foundUserCustomerContactsphone = await reposytoryCustomerContacts.findOne({
+        where: {
             phone: data.phone
         },
     });
 
     if (foundUserCustomerContacts) {
         return [409, { "message": "Costumer alredy exists!" }]
+    }
+
+    if (foundUserCustomerContactsphone) {
+        return [409, { "message": "Costumer phone alredy exists!" }]
     }
 
     const newCostumer = reposytoryCustomerContacts.create({

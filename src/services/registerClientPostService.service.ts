@@ -9,12 +9,22 @@ const registerClientPostService = async (data) => {
     const foundUserClient = await reposytoryClient.findOne({
         where: {
             email: data.email,
-            phone: data.phone
+
+        },
+    });
+    const foundUserClientPhone = await reposytoryClient.findOne({
+        where: {
+            phone: data.phone,
+
         },
     });
 
     if (foundUserClient) {
         return [409, { "message": "Client alredy exists!" }]
+    }
+
+    if (foundUserClientPhone) {
+        return [409, { "message": "Client phone alredy exists!" }]
     }
 
     const newClient = reposytoryClient.create(data);
@@ -24,7 +34,7 @@ const registerClientPostService = async (data) => {
         stripUnknown: true,
     });
 
-    return [200, newClientResponse]
+    return [201, newClientResponse]
 
 }
 

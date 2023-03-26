@@ -8,8 +8,10 @@ import { userGetController } from "./userGetController.controller";
 import { userUuidDeletController } from "./userUuidDeletController.controller";
 import { userUuidPatchController } from "./userUuidPatchController.controller";
 import { userGetEmailController } from "./userGetEmailController.controller";
+import { userIsActivateController } from "./userIsActivateController.controller";
 
 export {
+    userIsActivateController,
     listContactsUuidController,
     listContactsController,
     registerClientPostController,

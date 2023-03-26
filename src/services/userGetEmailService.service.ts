@@ -19,12 +19,12 @@ const userGetEmailService = async (email) => {
         },
     });
 
-    if (foundUserClient) {
-        return [200, foundUserClient]
-    }
-
     if (!foundUserClient && !foundCustomerContacts) {
         return [404, { "message": "Client or costumer not found" }]
+    }
+
+    if (foundUserClient) {
+        return [200, foundUserClient]
     }
 
     return [200, foundCustomerContacts]

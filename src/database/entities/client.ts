@@ -4,12 +4,9 @@ import {
     Column,
     JoinColumn,
     CreateDateColumn,
-    OneToMany,
-    BeforeUpdate,
-    BeforeInsert
+    OneToMany
 } from "typeorm";
 import { CustomerContacts } from "./customerContacts";
-import { hashSync, getRounds } from "bcryptjs";
 
 @Entity()
 export class Client {
@@ -21,9 +18,6 @@ export class Client {
 
     @Column({})
     email: string;
-
-    @Column()
-    password: string;
 
     @Column()
     phone: string;
@@ -41,12 +35,4 @@ export class Client {
     @JoinColumn()
     CustomerContacts_: CustomerContacts[];
 
-    @BeforeInsert()
-    @BeforeUpdate()
-    hashPassword() {
-        const isEncrypted = getRounds(this.password);
-        if (!isEncrypted) {
-            this.password = hashSync(this.password, 10);
-        }
-    }
 }

@@ -7,13 +7,14 @@ import { CustomerContacts } from "./database/entities/customerContacts";
 import { InitialMigration1679491021452 } from "./migrations/1679491021452-InitialMigration";
 import { InitialMigration1679491768458 } from "./migrations/1679491768458-InitialMigration";
 import { InitialMigration1679497548439 } from "./migrations/1679497548439-InitialMigration";
+import { InitialMigration1679661451083 } from "./migrations/1679661451083-InitialMigration";
 
 
 const nodeEnv: string = process.env.NODE_ENV;
 
 const dataSourceConfig = (): DataSourceOptions => {
     const entities = [Client, CustomerContacts]
-    const migrations = [InitialMigration1679491021452, InitialMigration1679491768458, InitialMigration1679497548439]
+    const migrations = [InitialMigration1679491021452, InitialMigration1679491768458, InitialMigration1679497548439, InitialMigration1679661451083]
     if (nodeEnv === "test") {
         return {
             type: "sqlite",

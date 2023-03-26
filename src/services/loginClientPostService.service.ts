@@ -20,11 +20,6 @@ const loginClientPostService = async (data) => {
         return [400, { "message": "User is not active" }]
     }
 
-    const passwordMatchClient = await compare(data.password, foundUserClient.password);
-
-    if (!passwordMatchClient) {
-        return [403, { "message": "password invalid" }];
-    }
 
     const tokenClient = jwt.sign(
         {
