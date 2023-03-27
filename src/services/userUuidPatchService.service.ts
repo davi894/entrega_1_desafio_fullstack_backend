@@ -19,13 +19,13 @@ const userUuidPatchService = async (data, uuid) => {
             id: uuid,
         },
     });
-
+   
     if (foundUserClient) {
         const updatedClient = reposytoryClient.create({
             ...foundUserClient,
             ...data,
         });
-
+      
         await reposytoryClient.save(updatedClient);
         const ClientResponse = await serializerClient.validate(updatedClient, {
             stripUnknown: true,
