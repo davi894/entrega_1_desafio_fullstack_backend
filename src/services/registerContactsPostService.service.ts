@@ -25,11 +25,11 @@ const registerContactsPostService = async (data, userId) => {
     });
 
     if (foundUserCustomerContacts) {
-        return [409, { "message": "Costumer alredy exists!" }]
+        return [409, { "message": "Contact alredy exists!" }]
     }
 
     if (foundUserCustomerContactsphone) {
-        return [409, { "message": "Costumer phone alredy exists!" }]
+        return [409, { "message": "Contact phone alredy exists!" }]
     }
 
     const newCostumer = reposytoryCustomerContacts.create({

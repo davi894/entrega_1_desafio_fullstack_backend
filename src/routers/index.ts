@@ -15,26 +15,29 @@ import {
 } from "../controllers";
 import { ensureAuthMiddleware, verifyClientMiddleware } from "../middlewares";
 
+
 const usersRoutes = Router();
 
-usersRoutes.post("/register", registerClientPostController) 
+usersRoutes.post("/register", registerClientPostController)
 
-usersRoutes.post("/login/client", loginClientPostController) 
+usersRoutes.post("/login/client", loginClientPostController)
 
-usersRoutes.post("/login/contact", loginContactPostController) 
+usersRoutes.post("/login/contact", loginContactPostController)
 
-usersRoutes.get("/user", ensureAuthMiddleware, userGetController) 
+usersRoutes.post("/register/contacts", ensureAuthMiddleware, verifyClientMiddleware, registerContactsPostController)
 
-usersRoutes.get("/user/found/:email", userGetEmailController) 
+usersRoutes.get("/user", ensureAuthMiddleware, userGetController)
 
-usersRoutes.post("/register/contacts", ensureAuthMiddleware, verifyClientMiddleware, registerContactsPostController) 
+usersRoutes.get("/user/found/:email", userGetEmailController)
 
-usersRoutes.get("/list/contacts", ensureAuthMiddleware, verifyClientMiddleware, listContactsController) 
+
+usersRoutes.get("/list/contacts", ensureAuthMiddleware, verifyClientMiddleware, listContactsController)
 usersRoutes.get("/list/contact/:uuid", ensureAuthMiddleware, verifyClientMiddleware, listContactsUuidController)
 
-usersRoutes.patch("/user", ensureAuthMiddleware, userUuidPatchController) 
-usersRoutes.patch("/user/is_activate",  userIsActivateController) 
+usersRoutes.patch("/user", ensureAuthMiddleware, userUuidPatchController)
+usersRoutes.patch("/user/is_activate", userIsActivateController)
 
-usersRoutes.delete("/user", ensureAuthMiddleware, userUuidDeletController) 
+usersRoutes.delete("/user", ensureAuthMiddleware, userUuidDeletController)
+
 
 export { usersRoutes }
