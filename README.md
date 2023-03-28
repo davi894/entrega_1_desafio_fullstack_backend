@@ -1,5 +1,30 @@
 # entrega_1_desafio_fullstack_backend
 
+## Configuração  para rodar a aplicação
+ criar um arquivo no do raiz desse diretorio chamado .env 
+ e adicionar as seguintes valores. 
+
+
+PGHOST: É o endereço do host ou o nome do host onde o banco de dados PostgreSQL está instalado.
+
+PGPORT: É a porta que o PostgreSQL está escutando. 
+
+PGUSER: É o nome do usuário que será usado para autenticar no banco de dados PostgreSQL. 
+
+PGPASSWORD: É a senha do usuário que será usada para autenticar no banco de dados PostgreSQL. 
+
+PGDATABASE: É o nome do banco de dados que será usado. 
+
+NODE_ENV: É a variável de ambiente que indica o ambiente de execução do aplicativo (produção, desenvolvimento, teste, etc.), mas nessa aplicação valor pode ser deixado, vazio pois ela roda apenas localmente.
+
+SECRET_KEY: É a chave secreta usada para assinar tokens de autenticação no aplicativo. (Pode ser qualquer coisa escrita)
+
+PORT: É a porta na qual o aplicativo será executado.
+        Ex.: http://localhost:3001,
+             http://localhost:3002,
+             http://localhost:3003,
+                ...
+
 ## Comando para Instalar dependencias do projeto
 ```
 "npm install"
