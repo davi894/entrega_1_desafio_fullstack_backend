@@ -10,7 +10,8 @@ import {
     listContactsController,
     listContactsUuidController,
     userGetEmailController,
-    userIsActivateController
+    userIsActivateController,
+    deleteContactsUuidController
 
 } from "../controllers";
 import { ensureAuthMiddleware, verifyClientMiddleware } from "../middlewares";
@@ -33,6 +34,7 @@ usersRoutes.get("/user/found/:email", userGetEmailController)
 
 usersRoutes.get("/list/contacts", ensureAuthMiddleware, verifyClientMiddleware, listContactsController)
 usersRoutes.get("/list/contact/:uuid", ensureAuthMiddleware, verifyClientMiddleware, listContactsUuidController)
+usersRoutes.delete("/contact/:uuid", ensureAuthMiddleware, verifyClientMiddleware, deleteContactsUuidController)
 
 usersRoutes.patch("/user", ensureAuthMiddleware, userUuidPatchController)
 usersRoutes.patch("/user/is_activate", userIsActivateController)

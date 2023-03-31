@@ -4,7 +4,6 @@
  criar um arquivo no do raiz desse diretorio chamado .env 
  e adicionar as seguintes valores. 
 
-
 PGHOST: É o endereço do host ou o nome do host onde o banco de dados PostgreSQL está instalado.
 
 PGPORT: É a porta que o PostgreSQL está escutando. 
@@ -35,6 +34,12 @@ PORT: É a porta na qual o aplicativo será executado.
 ```
 "npm run dev"
 ```
+
+e depois rodar os seguintes comando no terminal do diretorio
+
+primeiro comando => npm run typeorm migration:generate ./src/migrations/InitialMigration -- -d ./src/data-source.ts
+
+segundo comando => npm run typeorm migration:run -- -d ./src/data-source
 
 ## POST
 

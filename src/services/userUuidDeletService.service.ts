@@ -20,34 +20,15 @@ const userUuidDeletService = async (uuid) => {
     });
 
     if (foundUserClient) {
-        if (!foundUserClient.is_active) {
-            return [400, { "message": "Client is not active" }]
-        }
-        const updatedClient = reposytoryClient.create({
-            ...foundUserClient,
-            is_active: false,
-        });
 
-        await reposytoryClient.save(updatedClient);
-        const ClientResponse = await serializerClient.validate(updatedClient, {
-            stripUnknown: true,
-        });
+        await reposytoryClient.delete(uuid);
 
-        return [204, ClientResponse]
+        return [204, {}]
     }
 
-    if (!foundCustomerContacts.is_active) {
-        return [400, { "message": "Contact is not active" }]
-    }
+    await reposytoryCustomerContacts.delete(uuid);
 
-    const updatedCustomerContacts = reposytoryCustomerContacts.create({
-        ...foundCustomerContacts,
-        is_active: false,
-    });
-
-    const CustomerContactsResponse = await reposytoryCustomerContacts.save(updatedCustomerContacts);
-
-    return [204, CustomerContactsResponse]
+    return [204, {}]
 
 }
 

@@ -3,7 +3,6 @@ import jwt from "jsonwebtoken";
 import "dotenv/config";
 import { Client } from "../database/entities/client";
 import { AppDataSource } from "../data-source";
-import { CustomerContacts } from "../database/entities/customerContacts";
 
 const ensureAuthMiddleware = async (
     req: Request,
