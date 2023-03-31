@@ -1,5 +1,4 @@
 import { loginClientPostService } from "./loginClientPostService.service";
-import { loginContactPostService } from "./loginContactPostService.service";
 import { registerClientPostService } from "./registerClientPostService.service";
 import { registerContactsPostService } from "./registerContactsPostService.service";
 import { userGetService } from "./userGetService.service";
@@ -15,5 +14,4 @@ export {
     userUuidPatchService,
     userUuidDeletService,
     registerContactsPostService,
-    loginContactPostService
 }

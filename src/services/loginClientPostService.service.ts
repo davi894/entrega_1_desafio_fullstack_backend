@@ -16,11 +16,6 @@ const loginClientPostService = async (data) => {
         return [400, { "message": "Email invalid" }]
     }
 
-    if (!foundUserClient.is_active) {
-        return [400, { "message": "User is not active" }]
-    }
-
-
     const tokenClient = jwt.sign(
         {
             type: foundUserClient.email,

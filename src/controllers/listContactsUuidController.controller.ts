@@ -2,7 +2,7 @@ import { listContactsUuidService } from "../services/listContactsUuidService.ser
 
 const listContactsUuidController = async (req, res) => {
     const userId = req.user.id
-    const paramId = req.params.id
+    const paramId = req.params.uuid
     const [status, data] = await listContactsUuidService(userId, paramId)
 
     return res.status(status).json(data[0])

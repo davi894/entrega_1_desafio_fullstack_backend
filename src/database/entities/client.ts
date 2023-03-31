@@ -21,9 +21,9 @@ export class Client {
 
     @Column()
     phone: string;
-
+/* 
     @Column({ default: true })
-    is_active: boolean;
+    is_active: boolean; */
 
     @Column({ default: true })
     is_client: boolean;

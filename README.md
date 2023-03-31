@@ -41,6 +41,7 @@ primeiro comando => npm run typeorm migration:generate ./src/migrations/InitialM
 
 segundo comando => npm run typeorm migration:run -- -d ./src/data-source
 
+
 ## POST
 
 ``` 
@@ -70,7 +71,7 @@ response
 ```
 
 ``` 
-/login/client
+/login
 
 request
 
@@ -86,26 +87,6 @@ response
 	    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiY2xpZW50QGdtYWlsLmNvbSIsImlhdCI6MTY3OTgwMjQ5NywiZXhwIjoxNjc5ODg4ODk3LCJzdWIiOiJhMmJkYzNjOC0yYTFhLTRlZDUtOGEwZC01OTA4NDI0YTViNWIifQ.EE2AhotOx6m_FSa5iP4l_4TVY01GsRhU9qMfKXLXfG4"
     }
 
-
-```
-
-``` 
-/login/contact
-
-request
-
-    {
-	    "email":"contacts@gmail.com"
-    }
-
-response
-
-    status - 200
-
-
-    {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiY29udGFjdHNAZ21haWwuY29tIiwiaWF0IjoxNjc5NjgzMzgxLCJleHAiOjE2Nzk3Njk3ODEsInN1YiI6Ijg2MjkzMjlhLTg3MjktNDE1YS1hNDE2LTVhM2E0NGRhMDllMyJ9.V7MxvHNwJpLCfnSufy1XoIeXVPnIF2NwcRwthqa2Aec"
-    }
 
 ```
 
@@ -152,31 +133,6 @@ response
         "is_client": true,
         "createdAt": "2023-03-27T07:41:16.800Z"
     }
-
-```
-
-``` 
-/user/found/:email
-
-params request
-
-    /user/found/client@gmail.com
-
-response
-
-    status - 200
-
-    {
-        "id": "a2bdc3c8-2a1a-4ed5-8a0d-5908424a5b5b",
-        "name": "client",
-        "email": "client@gmail.com",
-        "password": "$2a$10$lwniynXg2rP9WdihxiO0PuefgC.YNQfhTvxCa.sVRga2IlNY47zDe",
-        "phone": "12345433312",
-        "is_active": true,
-        "is_client": true,
-        "createdAt": "2023-03-22T14:11:12.540Z"
-    }
-
 
 ```
 
@@ -249,27 +205,28 @@ response
 ```
 
 ``` 
-/user/is_activate
+/contact/:uuid
 
-resquest
+request
+
+    params: uuid contact
+    body
 
     {
-	    "email": "contacts1@gmail.com"
+	    "name": "contact"
     }
 
-response 
+response
 
     status - 200
 
     {
-	    "id": "dc1ec3d9-9a2d-433a-97d8-58f8c7c90b1e",
-	    "name": "contacts1",
-	    "email": "contacts1@gmail.com",
-	    "phone": "123454333",
-	    "is_active": true,
-	    "createdAt": "2023-03-24T11:59:04.272Z"
+	    "createdAt": "Mon Mar 27 2023 04:41:16 GMT-0300 (Brasilia Standard Time)",
+	    "phone": "123454a03",
+	    "email": "dad@gmail.com",
+	    "name": "contact",
+	    "id": "41c1abde-59e5-4908-91bb-8c480a201414"    
     }
-
 ```
 
 
@@ -284,3 +241,14 @@ response
     status 204
 
 ```
+
+``` 
+/contact/:uuid
+
+response
+    params: uuid contact
+
+    status 204
+
+```
+

@@ -1,19 +1,17 @@
 import { listContactsController } from "./listContactsController.controller";
 import { loginClientPostController } from "./loginClientPostController.controller";
-import { loginContactPostController } from "./loginContactPostController.controller";
 import { registerClientPostController } from "./registerClientPostController.controller";
 import { registerContactsPostController } from "./registerContactsPostController.controller";
 import { listContactsUuidController } from "./listContactsUuidController.controller";
 import { userGetController } from "./userGetController.controller";
 import { userUuidDeletController } from "./userUuidDeletController.controller";
 import { userUuidPatchController } from "./userUuidPatchController.controller";
-import { userGetEmailController } from "./userGetEmailController.controller";
-import { userIsActivateController } from "./userIsActivateController.controller";
 import { deleteContactsUuidController } from "./deleteContactsUuidController.controller";
+import { updateContactsUuidController } from "./updateContactsUuidController.controller";
 
 export {
+    updateContactsUuidController,
     deleteContactsUuidController,
-    userIsActivateController,
     listContactsUuidController,
     listContactsController,
     registerClientPostController,
@@ -22,6 +20,4 @@ export {
     userGetController,
     userUuidPatchController,
     userUuidDeletController,
-    loginContactPostController,
-    userGetEmailController
 }
