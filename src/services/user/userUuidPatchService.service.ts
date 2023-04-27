@@ -1,9 +1,9 @@
-import { AppDataSource } from "../data-source";
-import { Client } from "../database/entities/client";
-import { serializerClient } from "../serializers/user";
+import { AppDataSource } from "../../data-source";
+import { Client } from "../../database/entities/client";
+import { serializerClient } from "../../serializers/user";
 
 const userUuidPatchService = async (data, uuid) => {
-  
+
     const reposytoryClient = AppDataSource.getRepository(Client);
 
     const foundUserClient = await reposytoryClient.findOne({

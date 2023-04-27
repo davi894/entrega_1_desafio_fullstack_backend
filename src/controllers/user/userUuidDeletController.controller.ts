@@ -1,4 +1,4 @@
-import { userUuidDeletService } from "../services"
+import { userUuidDeletService } from "../../services"
 
 const userUuidDeletController = async (req, res) => {
     const reqParams = req.user.id

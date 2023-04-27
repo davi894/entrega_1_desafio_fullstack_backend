@@ -1,5 +1,5 @@
-import { AppDataSource } from "../data-source";
-import { CustomerContacts } from "../database/entities/customerContacts";
+import { AppDataSource } from "../../data-source";
+import { CustomerContacts } from "../../database/entities/customerContacts";
 
 const deleteContactsUuidService = async (contacetId) => {
     const reposytoryCustomerContacts = AppDataSource.getRepository(CustomerContacts);

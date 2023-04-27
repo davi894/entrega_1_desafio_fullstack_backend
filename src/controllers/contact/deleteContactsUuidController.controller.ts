@@ -1,11 +1,11 @@
-import { deleteContactsUuidService } from "../services/deleteContactsUuidService.service"
+import { deleteContactsUuidService } from "../../services/contact/deleteContactsUuidService.service"
 
 
 
 const deleteContactsUuidController = async (req, res) => {
     const idContact = req.params.uuid.replace(':', '')
 
-    const [status, data] = await deleteContactsUuidService( idContact)
+    const [status, data] = await deleteContactsUuidService(idContact)
 
 
     return res.status(status).json(data)

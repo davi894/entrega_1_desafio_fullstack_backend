@@ -1,4 +1,4 @@
-import { listContactsService } from "../services/listContactsService.service"
+import { listContactsService } from "../../services/contact/listContactsService.service"
 
 
 const listContactsController = async (req, res) => {

@@ -1,4 +1,4 @@
-import { loginClientPostService } from "../services"
+import { loginClientPostService } from "../../services"
 
 const loginClientPostController = async (req, res) => {
     const reqData = req.body

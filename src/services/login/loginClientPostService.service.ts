@@ -1,5 +1,5 @@
-import { AppDataSource } from "../data-source";
-import { Client } from "../database/entities/client";
+import { AppDataSource } from "../../data-source";
+import { Client } from "../../database/entities/client";
 import jwt from "jsonwebtoken";
 import { compare } from "bcryptjs";
 

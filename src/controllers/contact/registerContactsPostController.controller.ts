@@ -1,4 +1,4 @@
-import { registerContactsPostService } from "../services"
+import { registerContactsPostService } from "../../services"
 
 const registerContactsPostController = async (req, res) => {
     const reqData = req.body

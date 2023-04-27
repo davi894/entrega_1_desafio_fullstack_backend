@@ -1,4 +1,4 @@
-import { registerClientPostService } from "../services"
+import { registerClientPostService } from "../../services"
 
 const registerClientPostController = async (req, res) => {
     const reqData = req.body

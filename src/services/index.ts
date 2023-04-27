@@ -1,9 +1,9 @@
-import { loginClientPostService } from "./loginClientPostService.service";
-import { registerClientPostService } from "./registerClientPostService.service";
-import { registerContactsPostService } from "./registerContactsPostService.service";
-import { userGetService } from "./userGetService.service";
-import { userUuidDeletService } from "./userUuidDeletService.service";
-import { userUuidPatchService } from "./userUuidPatchService.service";
+import { loginClientPostService } from "./login/loginClientPostService.service";
+import { registerClientPostService } from "./client/registerClientPostService.service";
+import { registerContactsPostService } from "./contact/registerContactsPostService.service";
+import { userGetService } from "./user/userGetService.service";
+import { userUuidDeletService } from "./user/userUuidDeletService.service";
+import { userUuidPatchService } from "./user/userUuidPatchService.service";
 
 
 

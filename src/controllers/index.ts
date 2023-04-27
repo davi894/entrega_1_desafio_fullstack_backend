@@ -1,13 +1,13 @@
-import { listContactsController } from "./listContactsController.controller";
-import { loginClientPostController } from "./loginClientPostController.controller";
-import { registerClientPostController } from "./registerClientPostController.controller";
-import { registerContactsPostController } from "./registerContactsPostController.controller";
-import { listContactsUuidController } from "./listContactsUuidController.controller";
-import { userGetController } from "./userGetController.controller";
-import { userUuidDeletController } from "./userUuidDeletController.controller";
-import { userUuidPatchController } from "./userUuidPatchController.controller";
-import { deleteContactsUuidController } from "./deleteContactsUuidController.controller";
-import { updateContactsUuidController } from "./updateContactsUuidController.controller";
+import { listContactsController } from "./contact/listContactsController.controller";
+import { loginClientPostController } from "./login/loginClientPostController.controller";
+import { registerClientPostController } from "./client/registerClientPostController.controller";
+import { registerContactsPostController } from "./contact/registerContactsPostController.controller";
+import { listContactsUuidController } from "./contact/listContactsUuidController.controller";
+import { userGetController } from "./user/userGetController.controller";
+import { userUuidDeletController } from "./user/userUuidDeletController.controller";
+import { userUuidPatchController } from "./user/userUuidPatchController.controller";
+import { deleteContactsUuidController } from "./contact/deleteContactsUuidController.controller";
+import { updateContactsUuidController } from "./contact/updateContactsUuidController.controller";
 
 export {
     updateContactsUuidController,

@@ -1,6 +1,6 @@
-import { AppDataSource } from "../data-source";
-import { Client } from "../database/entities/client";
-import { CustomerContacts } from "../database/entities/customerContacts";
+import { AppDataSource } from "../../data-source";
+import { Client } from "../../database/entities/client";
+import { CustomerContacts } from "../../database/entities/customerContacts";
 
 const registerContactsPostService = async (data, userId) => {
 

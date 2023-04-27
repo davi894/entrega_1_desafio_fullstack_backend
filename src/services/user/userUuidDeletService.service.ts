@@ -1,7 +1,7 @@
-import { AppDataSource } from "../data-source";
-import { Client } from "../database/entities/client";
-import { CustomerContacts } from "../database/entities/customerContacts";
-import { serializerClient } from "../serializers/user";
+import { AppDataSource } from "../../data-source";
+import { Client } from "../../database/entities/client";
+import { CustomerContacts } from "../../database/entities/customerContacts";
+import { serializerClient } from "../../serializers/user";
 
 const userUuidDeletService = async (uuid) => {
     const reposytoryCustomerContacts = AppDataSource.getRepository(CustomerContacts);

@@ -1,5 +1,5 @@
-import { AppDataSource } from "../data-source";
-import { CustomerContacts } from "../database/entities/customerContacts";
+import { AppDataSource } from "../../data-source";
+import { CustomerContacts } from "../../database/entities/customerContacts";
 
 
 const listContactsService = async (userId) => {
